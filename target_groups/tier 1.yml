@@ -1,0 +1,16 @@
+type: target-group
+name: tier 1
+conditions:
+  - operator: in-array
+    property: groupID
+    operand:
+      - '231321'
+      - '23'
+      - '23321'
+      - '321'
+      - ''
+      - '32'
+      - '123'
+      - '4'
+      - '45'
+      - '214'

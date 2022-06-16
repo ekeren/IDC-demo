@@ -1,0 +1,9 @@
+type: target-group
+name: QA
+conditions:
+  - operator: in-array
+    property: groupID
+    operand:
+      - '1234'
+      - asdfd
+      - qwee
