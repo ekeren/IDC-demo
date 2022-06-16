@@ -1,0 +1,6 @@
+type: target-group
+name: Internal team
+conditions:
+  - operator: regex
+    property: userId
+    operand: cloudbees-.*
