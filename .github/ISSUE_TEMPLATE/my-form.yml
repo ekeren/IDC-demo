@@ -9,7 +9,7 @@ body:
   - type: textarea
     id: i-tried-this
     attributes:
-      label: I tried this:
+      label: I tried this
       description: What did you try to do?
       placeholder: Code/explanation to reproduce bug
     validations:
