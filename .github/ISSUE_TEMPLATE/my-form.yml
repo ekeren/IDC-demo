@@ -35,15 +35,15 @@ body:
   attributes:
     label: Component
     description: Which component is this related to? (one or more)
-    multiple: true
-    options:
-     - Language Design
-     - Compiler
-     - SDK
-     - IDE Extension
-     - Documentation
-     - Development Environment
-      - Contributor Experience
+  multiple: true
+  options:
+   - Language Design
+   - Compiler
+   - SDK
+   - IDE Extension
+   - Documentation
+   - Development Environment
+    - Contributor Experience
   validations:
     required: true
 - type: textarea
