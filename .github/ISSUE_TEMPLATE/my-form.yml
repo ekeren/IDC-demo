@@ -1,5 +1,5 @@
 name: Bug Report 🐞
-about: Create a bug report
+description: Create a bug report
 labels: ["bug","untriaged"]
 body:
 - type: markdown
@@ -58,7 +58,7 @@ body:
      - Wing Version:
      - OS:
      - Node version:
-  render: markdown
+    render: markdown
   validations:
     required: false
 - type: textarea
