@@ -25,7 +25,7 @@ body:
   - type: textarea
     id: instead-what-happened
     attributes:
-      label: Instead, this happened:
+      label: Instead, this happened
       description: What happend instead of what you've expected?
       placeholder: Tell us what did you see!
     validations:
