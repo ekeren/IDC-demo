@@ -41,9 +41,9 @@ body:
     - Compiler
     - SDK
     - IDE Extension
-     - Documentation
-     - Development Environment
-     - Contributor Experience
+    - Documentation
+    - Development Environment
+    - Contributor Experience
   validations:
     required: true
 - type: textarea
