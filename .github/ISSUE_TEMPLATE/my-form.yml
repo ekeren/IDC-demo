@@ -14,7 +14,7 @@ body:
     placeholder: Code/explanation to reproduce bug
   validations:
     required: true
-- type: textarea
+- type: input
   id: what-did-you-expect
   attributes:
     label: Expected
