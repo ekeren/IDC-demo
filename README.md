@@ -7,7 +7,7 @@ Configuration as code allows the entire configuration of Rollout's state to be s
 
 
 # What is Rollout
-Rollout is a multi-platform, infrastructure as code, software as a service feature management and remote configuration solution.
+Rollout is a multi-platform, infrastructure as code, software as a service feature management and s configuration solution.
 
 # What Are Feature Flags
 
