@@ -1,316 +1,316 @@
-![cloudbees feature management](https://1ko9923xosh2dsbjsxpwqp45-wpengine.netdna-ssl.com/wp-content/themes/rollout/images/rollout_white_logo1.png)
+![CLOUDBEES FEATURE MANAGEMENT](HTTPS://1KO9923XOSH2DSBJSXPWQP45-WPENGINE.NETDNA-SSL.COM/WP-CONTENT/THEMES/ROLLOUT/IMAGES/ROLLOUT_WHITE_LOGO1.PNG)
 
-[![integration status](https://app.rollout.io/badges/62ab387e67e477c66f32e381)](https://app.rollout.io/app/62978f616063e0a2753d64d8/settings/info)
+[![INTEGRATION STATUS](HTTPS://APP.ROLLOUT.IO/BADGES/62AB387E67E477C66F32E381)](HTTPS://APP.ROLLOUT.IO/APP/62978F616063E0A2753D64D8/SETTINGS/INFO)
 
-this repository is a yaml represnetation for rollout configuration, it is connected (see badge for status) to rollout service via [rollout's github app](https://github.com/apps/rollout-io)
-configuration as code allows the entire configuration of rollout's state to be stored as source code. it integrates rollout's ui with engineering existing environment. this approach brings a lot of benefits.
-
-
-# what is rollout
-rollout is a multi-platform, infrastructure as code, software as a service feature management and s configuration solution.
-
-# what are feature flags
-
-feature flags is a powerfull technique based on remotetly and conditionaly opening/closing features threw the entire feature developement and delivery process.  as martin fowler writes on [feature toggles (aka feature flags)](https://martinfowler.com/articles/feature-toggles.html)
-
-> feature toggles (often also refered to as feature flags) are a powerful technique, allowing teams to modify system behavior without changing code. they fall into various usage categories, and it's important to take that categorization into account when implementing and managing toggles. toggles introduce complexity. we can keep that complexity in check by using smart toggle implementation practices and appropriate tools to manage our toggle configuration, but we should also aim to constrain the number of toggles in our system.
-
-you can read more about the advantages of having rollout configuration stored and treated as code in [rollout's support doc](https://support.rollout.io/docs/configuration-as-code)
+THIS REPOSITORY IS A YAML REPRESNETATION FOR ROLLOUT CONFIGURATION, IT IS CONNECTED (SEE BADGE FOR STATUS) TO ROLLOUT SERVICE VIA [ROLLOUT'S GITHUB APP](HTTPS://GITHUB.COM/APPS/ROLLOUT-IO)
+CONFIGURATION AS CODE ALLOWS THE ENTIRE CONFIGURATION OF ROLLOUT'S STATE TO BE STORED AS SOURCE CODE. IT INTEGRATES ROLLOUT'S UI WITH ENGINEERING EXISTING ENVIRONMENT. THIS APPROACH BRINGS A LOT OF BENEFITS.
 
 
-# repository, directories and yaml structure
-## branches are environments
+# WHAT IS ROLLOUT
+ROLLOUT IS A MULTI-PLATFORM, INFRASTRUCTURE AS CODE, SOFTWARE AS A SERVICE FEATURE MANAGEMENT AND S CONFIGURATION SOLUTION.
 
-every environment on rollout dashboard is mapped to a branch in git. the same name that is used for the environment will be used for the branch name. the only exception being production environment which is mapped to `master` branch
+# WHAT ARE FEATURE FLAGS
 
-## directory structure
+FEATURE FLAGS IS A POWERFULL TECHNIQUE BASED ON REMOTETLY AND CONDITIONALY OPENING/CLOSING FEATURES THREW THE ENTIRE FEATURE DEVELOPEMENT AND DELIVERY PROCESS.  AS MARTIN FOWLER WRITES ON [FEATURE TOGGLES (AKA FEATURE FLAGS)](HTTPS://MARTINFOWLER.COM/ARTICLES/FEATURE-TOGGLES.HTML)
 
-rollout repository integration creates the following directory structure:
+> FEATURE TOGGLES (OFTEN ALSO REFERED TO AS FEATURE FLAGS) ARE A POWERFUL TECHNIQUE, ALLOWING TEAMS TO MODIFY SYSTEM BEHAVIOR WITHOUT CHANGING CODE. THEY FALL INTO VARIOUS USAGE CATEGORIES, AND IT'S IMPORTANT TO TAKE THAT CATEGORIZATION INTO ACCOUNT WHEN IMPLEMENTING AND MANAGING TOGGLES. TOGGLES INTRODUCE COMPLEXITY. WE CAN KEEP THAT COMPLEXITY IN CHECK BY USING SMART TOGGLE IMPLEMENTATION PRACTICES AND APPROPRIATE TOOLS TO MANAGE OUR TOGGLE CONFIGURATION, BUT WE SHOULD ALSO AIM TO CONSTRAIN THE NUMBER OF TOGGLES IN OUR SYSTEM.
+
+YOU CAN READ MORE ABOUT THE ADVANTAGES OF HAVING ROLLOUT CONFIGURATION STORED AND TREATED AS CODE IN [ROLLOUT'S SUPPORT DOC](HTTPS://SUPPORT.ROLLOUT.IO/DOCS/CONFIGURATION-AS-CODE)
+
+
+# REPOSITORY, DIRECTORIES AND YAML STRUCTURE
+## BRANCHES ARE ENVIRONMENTS
+
+EVERY ENVIRONMENT ON ROLLOUT DASHBOARD IS MAPPED TO A BRANCH IN GIT. THE SAME NAME THAT IS USED FOR THE ENVIRONMENT WILL BE USED FOR THE BRANCH NAME. THE ONLY EXCEPTION BEING PRODUCTION ENVIRONMENT WHICH IS MAPPED TO `MASTER` BRANCH
+
+## DIRECTORY STRUCTURE
+
+ROLLOUT REPOSITORY INTEGRATION CREATES THE FOLLOWING DIRECTORY STRUCTURE:
 ```
 .
-├── experiments             # experiments definitions
-│   └──  archived           # archived experiments definitions
-├── target_groups           # target groups definitions
-└── readme.md
+├── EXPERIMENTS             # EXPERIMENTS DEFINITIONS
+│   └──  ARCHIVED           # ARCHIVED EXPERIMENTS DEFINITIONS
+├── TARGET_GROUPS           # TARGET GROUPS DEFINITIONS
+└── README.MD
 ```
 
-- all experiments are located under the experiment folder
-- all archived experiments are located under the `experiments/archived` folder
+- ALL EXPERIMENTS ARE LOCATED UNDER THE EXPERIMENT FOLDER
+- ALL ARCHIVED EXPERIMENTS ARE LOCATED UNDER THE `EXPERIMENTS/ARCHIVED` FOLDER
 
-## experiment examples
+## EXPERIMENT EXAMPLES
 
-### false for all users
-```yaml
-flag: default.followingview
-type: experiment
-name: following view
-value: false
+### FALSE FOR ALL USERS
+```YAML
+FLAG: DEFAULT.FOLLOWINGVIEW
+TYPE: EXPERIMENT
+NAME: FOLLOWING VIEW
+VALUE: FALSE
 ```
-this yaml representation in rollout's dashboard:
-![dashboard](https://files.readme.io/00b37e6-screen_shot_2018-12-03_at_11.47.56.png)
-### 50% split
-```yaml
-flag: default.followingview
-type: experiment
-name: following view
-value:
-  - option: true
-    percentage: 50
+THIS YAML REPRESENTATION IN ROLLOUT'S DASHBOARD:
+![DASHBOARD](HTTPS://FILES.README.IO/00B37E6-SCREEN_SHOT_2018-12-03_AT_11.47.56.PNG)
+### 50% SPLIT
+```YAML
+FLAG: DEFAULT.FOLLOWINGVIEW
+TYPE: EXPERIMENT
+NAME: FOLLOWING VIEW
+VALUE:
+  - OPTION: TRUE
+    PERCENTAGE: 50
 ```
-this yaml representation in rollout's dashboard:
-![dashboard](https://files.readme.io/5af4d9e-screen_shot_2018-12-03_at_12.01.28.png)
-### open feature for qa and beta users on version 3.0.1, otherwise close it
-```yaml
-flag: default.followingview
-type: experiment
-name: following view
-conditions:
-  - group:
-      name:
-        - qa
-        - beta users
-    version:
-      operator: semver-gte
-      semver: 3.0.1
-    value: true
-value: false
+THIS YAML REPRESENTATION IN ROLLOUT'S DASHBOARD:
+![DASHBOARD](HTTPS://FILES.README.IO/5AF4D9E-SCREEN_SHOT_2018-12-03_AT_12.01.28.PNG)
+### OPEN FEATURE FOR QA AND BETA USERS ON VERSION 3.0.1, OTHERWISE CLOSE IT
+```YAML
+FLAG: DEFAULT.FOLLOWINGVIEW
+TYPE: EXPERIMENT
+NAME: FOLLOWING VIEW
+CONDITIONS:
+  - GROUP:
+      NAME:
+        - QA
+        - BETA USERS
+    VERSION:
+      OPERATOR: SEMVER-GTE
+      SEMVER: 3.0.1
+    VALUE: TRUE
+VALUE: FALSE
 ```
-this yaml representation in rollout's dashboard:
-![dashboard](https://files.readme.io/6884476-screen_shot_2018-12-03_at_12.04.13.png)
-### open feature for all platform beside android
-```yaml
-flag: default.followingview
-type: experiment
-name: following view
-platforms:
-  - name: android
-    value: false
-value: true
+THIS YAML REPRESENTATION IN ROLLOUT'S DASHBOARD:
+![DASHBOARD](HTTPS://FILES.README.IO/6884476-SCREEN_SHOT_2018-12-03_AT_12.04.13.PNG)
+### OPEN FEATURE FOR ALL PLATFORM BESIDE ANDROID
+```YAML
+FLAG: DEFAULT.FOLLOWINGVIEW
+TYPE: EXPERIMENT
+NAME: FOLLOWING VIEW
+PLATFORMS:
+  - NAME: ANDROID
+    VALUE: FALSE
+VALUE: TRUE
 ```
-dashboard default platfrom configuration:
-![dashboard](https://files.readme.io/461c854-screen_shot_2018-12-04_at_10.19.59.png)
-dashboard android configuration:
-![dashboard](https://files.readme.io/1aafd04-screen_shot_2018-12-03_at_21.39.52.png)
-## experiment yaml
+DASHBOARD DEFAULT PLATFROM CONFIGURATION:
+![DASHBOARD](HTTPS://FILES.README.IO/461C854-SCREEN_SHOT_2018-12-04_AT_10.19.59.PNG)
+DASHBOARD ANDROID CONFIGURATION:
+![DASHBOARD](HTTPS://FILES.README.IO/1AAFD04-SCREEN_SHOT_2018-12-03_AT_21.39.52.PNG)
+## EXPERIMENT YAML
 
-this section describes the yaml scheme for an experiment. it is a composite of 3 schemas:
-
-
--  [root schema ](doc:configuration-as-code#section-root-schema)  - the base schema for experiment
--  [splited value schema](doc:configuration-as-code#section-splitedvalue-schema)  - represents a splited value -  a value that is distributed among different instances based on percentage
--  [scheduled value schema](doc:configuration-as-code#section-scheduledvalue-schema)  - represents a scheduled value -  a value that is based on the time that the flag was evaluated
--  [condition schema](doc:configuration-as-code#section-condition-schema)  - specify how to target a specific audience/device
--  [platform schema](doc:configuration-as-code#section-platform-schema)  - specify how to target a specific platform
+THIS SECTION DESCRIBES THE YAML SCHEME FOR AN EXPERIMENT. IT IS A COMPOSITE OF 3 SCHEMAS:
 
 
+-  [ROOT SCHEMA ](DOC:CONFIGURATION-AS-CODE#SECTION-ROOT-SCHEMA)  - THE BASE SCHEMA FOR EXPERIMENT
+-  [SPLITED VALUE SCHEMA](DOC:CONFIGURATION-AS-CODE#SECTION-SPLITEDVALUE-SCHEMA)  - REPRESENTS A SPLITED VALUE -  A VALUE THAT IS DISTRIBUTED AMONG DIFFERENT INSTANCES BASED ON PERCENTAGE
+-  [SCHEDULED VALUE SCHEMA](DOC:CONFIGURATION-AS-CODE#SECTION-SCHEDULEDVALUE-SCHEMA)  - REPRESENTS A SCHEDULED VALUE -  A VALUE THAT IS BASED ON THE TIME THAT THE FLAG WAS EVALUATED
+-  [CONDITION SCHEMA](DOC:CONFIGURATION-AS-CODE#SECTION-CONDITION-SCHEMA)  - SPECIFY HOW TO TARGET A SPECIFIC AUDIENCE/DEVICE
+-  [PLATFORM SCHEMA](DOC:CONFIGURATION-AS-CODE#SECTION-PLATFORM-SCHEMA)  - SPECIFY HOW TO TARGET A SPECIFIC PLATFORM
 
-### root schema
-an experiment controls the flag value in runtime:
 
-```yaml
-# yaml api version
-# optional: defaults to "1.0.0"
-version: semver
 
-# yaml type (required)
-type: "experiment"
+### ROOT SCHEMA
+AN EXPERIMENT CONTROLS THE FLAG VALUE IN RUNTIME:
 
-# the flag being controlled by this experiment (required)
-flag: string
+```YAML
+# YAML API VERSION
+# OPTIONAL: DEFAULTS TO "1.0.0"
+VERSION: SEMVER
 
-# the available values that this flag can be
-# optional=[false, true]
-availablevalues: [string|bool]
+# YAML TYPE (REQUIRED)
+TYPE: "EXPERIMENT"
 
-# the name of the experiment
-# optional: default flag name
-name: string
+# THE FLAG BEING CONTROLLED BY THIS EXPERIMENT (REQUIRED)
+FLAG: STRING
 
-# the description of the experiment
-# optional=""
-description: string
+# THE AVAILABLE VALUES THAT THIS FLAG CAN BE
+# OPTIONAL=[FALSE, TRUE]
+AVAILABLEVALUES: [STRING|BOOL]
 
-# indicates if the experiment is active
-# optional=true
-enabled: boolean
+# THE NAME OF THE EXPERIMENT
+# OPTIONAL: DEFAULT FLAG NAME
+NAME: STRING
 
-# expriment lables
-# optional=[]
-labels: [string]|string
+# THE DESCRIPTION OF THE EXPERIMENT
+# OPTIONAL=""
+DESCRIPTION: STRING
 
-# stickiness property that controls percentage based tossing
-# optional="rox.distict_id"
-stickinessproperty: string
+# INDICATES IF THE EXPERIMENT IS ACTIVE
+# OPTIONAL=TRUE
+ENABLED: BOOLEAN
 
-# platfrom explicit targeting
-# optional=[]
-platforms: [platfrom]  # see platfrom schema
+# EXPRIMENT LABLES
+# OPTIONAL=[]
+LABELS: [STRING]|STRING
 
-# condition and values for default platfomr
-# optional=[]
-conditions: [condition] # see condition schema
+# STICKINESS PROPERTY THAT CONTROLS PERCENTAGE BASED TOSSING
+# OPTIONAL="ROX.DISTICT_ID"
+STICKINESSPROPERTY: STRING
 
-# value when no condition is met
-# optional
-#  false for boolean flags
-#  null for enum flags  (indicates default value)
-value: string|boolean|[splitedvalue]|[scheduledvalue]|null
-```
+# PLATFROM EXPLICIT TARGETING
+# OPTIONAL=[]
+PLATFORMS: [PLATFROM]  # SEE PLATFROM SCHEMA
 
-### splitedvalue schema
-```yaml
-# percentage, used for splitting traffic across different values
-# optional=100
-percentage: number
+# CONDITION AND VALUES FOR DEFAULT PLATFOMR
+# OPTIONAL=[]
+CONDITIONS: [CONDITION] # SEE CONDITION SCHEMA
 
-# the value to be delivered
-option: string|boolean
-```
-### scheduledvalue schema
-```yaml
-# the date from which this value is relevant
-# optional=undefined
-from: date
-
-# percentage, used for splitting traffic across different values
-# optional=100
-percentage: number
-```
-### condition schema
-
-the condition is a pair of condition and value, an array of conditions can be viewed as an if-else statement by the order of conditions
-
-the schema contains three types of condition statements
-- dependency - express flag dependencies, by indicating flag name and expected value
-- groups - a list of target-groups and the operator that indicates the relationship between them (`or`|`and`|`not`)
-- version -  comparing the version of
-[/block]
-the relationship between these items is `and`, meaning:
-       if the dependency is met `and` groups matches `and` version matches  `then` flage=value
-
-here is the condition schema
-```yaml
-# condition this flag value with another flag value
-dependency:
-    # flag name
-    flag: string
-    # the expected flag value
-    value: string|boolean
-
-# condition flag value based on target group(s)
-group:
-    # the logical relationship between the groups
-    # optional = or
-    operator: or|and|not
-
-    # name of target groups
-    name: [string]|string
-
-# condition flag value based release version
-version:
-    # the operator to compare version
-    operator: semver-gt|semver-gte|semver-eq|semver-ne|semver-lt|semver-lte
-
-    # the version to compare to
-    semver: semver
-
-# value when condition is met
-value: string|boolean|[splitedvalue]|[scheduledvalue]|null
-```
-### platform schema
-the platform object indicates a specific targeting for a specific platform
-
-```yaml
-# name of the platform, as defined in the sdk running
-name: string
-
-# override the flag name, when needed
-# optional = experiment flag name
-flag: string
-
-# condition and values for default platfomr
-# optional=[]
-conditions: [condition] # see condition schema
-
-# value when no condition is met
-# optional
-#  false for boolean flags
-#  null for enum flags  (indicates default value)
-value: string|boolean|[splitedvalue]|[scheduledvalue]|null # see value schema
+# VALUE WHEN NO CONDITION IS MET
+# OPTIONAL
+#  FALSE FOR BOOLEAN FLAGS
+#  NULL FOR ENUM FLAGS  (INDICATES DEFAULT VALUE)
+VALUE: STRING|BOOLEAN|[SPLITEDVALUE]|[SCHEDULEDVALUE]|NULL
 ```
 
+### SPLITEDVALUE SCHEMA
+```YAML
+# PERCENTAGE, USED FOR SPLITTING TRAFFIC ACROSS DIFFERENT VALUES
+# OPTIONAL=100
+PERCENTAGE: NUMBER
 
-## target group examples
-### list of matching userid
-```yaml
-type: target-group
-name: qa
-conditions:
-  - operator: in-array
-    property: soundcloud_id
-    operand:
-      - 5c0588007cd291cca474454f
-      - 5c0588027cd291cca4744550
-      - 5c0588037cd291cca4744551
-      - 5c0588047cd291cca4744552
-      - 5c0588047cd291cca4744553
+# THE VALUE TO BE DELIVERED
+OPTION: STRING|BOOLEAN
+```
+### SCHEDULEDVALUE SCHEMA
+```YAML
+# THE DATE FROM WHICH THIS VALUE IS RELEVANT
+# OPTIONAL=UNDEFINED
+FROM: DATE
+
+# PERCENTAGE, USED FOR SPLITTING TRAFFIC ACROSS DIFFERENT VALUES
+# OPTIONAL=100
+PERCENTAGE: NUMBER
+```
+### CONDITION SCHEMA
+
+THE CONDITION IS A PAIR OF CONDITION AND VALUE, AN ARRAY OF CONDITIONS CAN BE VIEWED AS AN IF-ELSE STATEMENT BY THE ORDER OF CONDITIONS
+
+THE SCHEMA CONTAINS THREE TYPES OF CONDITION STATEMENTS
+- DEPENDENCY - EXPRESS FLAG DEPENDENCIES, BY INDICATING FLAG NAME AND EXPECTED VALUE
+- GROUPS - A LIST OF TARGET-GROUPS AND THE OPERATOR THAT INDICATES THE RELATIONSHIP BETWEEN THEM (`OR`|`AND`|`NOT`)
+- VERSION -  COMPARING THE VERSION OF
+[/BLOCK]
+THE RELATIONSHIP BETWEEN THESE ITEMS IS `AND`, MEANING:
+       IF THE DEPENDENCY IS MET `AND` GROUPS MATCHES `AND` VERSION MATCHES  `THEN` FLAGE=VALUE
+
+HERE IS THE CONDITION SCHEMA
+```YAML
+# CONDITION THIS FLAG VALUE WITH ANOTHER FLAG VALUE
+DEPENDENCY:
+    # FLAG NAME
+    FLAG: STRING
+    # THE EXPECTED FLAG VALUE
+    VALUE: STRING|BOOLEAN
+
+# CONDITION FLAG VALUE BASED ON TARGET GROUP(S)
+GROUP:
+    # THE LOGICAL RELATIONSHIP BETWEEN THE GROUPS
+    # OPTIONAL = OR
+    OPERATOR: OR|AND|NOT
+
+    # NAME OF TARGET GROUPS
+    NAME: [STRING]|STRING
+
+# CONDITION FLAG VALUE BASED RELEASE VERSION
+VERSION:
+    # THE OPERATOR TO COMPARE VERSION
+    OPERATOR: SEMVER-GT|SEMVER-GTE|SEMVER-EQ|SEMVER-NE|SEMVER-LT|SEMVER-LTE
+
+    # THE VERSION TO COMPARE TO
+    SEMVER: SEMVER
+
+# VALUE WHEN CONDITION IS MET
+VALUE: STRING|BOOLEAN|[SPLITEDVALUE]|[SCHEDULEDVALUE]|NULL
+```
+### PLATFORM SCHEMA
+THE PLATFORM OBJECT INDICATES A SPECIFIC TARGETING FOR A SPECIFIC PLATFORM
+
+```YAML
+# NAME OF THE PLATFORM, AS DEFINED IN THE SDK RUNNING
+NAME: STRING
+
+# OVERRIDE THE FLAG NAME, WHEN NEEDED
+# OPTIONAL = EXPERIMENT FLAG NAME
+FLAG: STRING
+
+# CONDITION AND VALUES FOR DEFAULT PLATFOMR
+# OPTIONAL=[]
+CONDITIONS: [CONDITION] # SEE CONDITION SCHEMA
+
+# VALUE WHEN NO CONDITION IS MET
+# OPTIONAL
+#  FALSE FOR BOOLEAN FLAGS
+#  NULL FOR ENUM FLAGS  (INDICATES DEFAULT VALUE)
+VALUE: STRING|BOOLEAN|[SPLITEDVALUE]|[SCHEDULEDVALUE]|NULL # SEE VALUE SCHEMA
 ```
 
-![dashboard](https://files.readme.io/7affbbe-screen_shot_2018-12-03_at_21.47.05.png)
-### using number property for comparison
 
-```yaml
-type: target-group
-name: dj
-conditions:
-  - operator: gte
-    property: playlist_count
-    operand: 100
-description: users with a lot of playlists
+## TARGET GROUP EXAMPLES
+### LIST OF MATCHING USERID
+```YAML
+TYPE: TARGET-GROUP
+NAME: QA
+CONDITIONS:
+  - OPERATOR: IN-ARRAY
+    PROPERTY: SOUNDCLOUD_ID
+    OPERAND:
+      - 5C0588007CD291CCA474454F
+      - 5C0588027CD291CCA4744550
+      - 5C0588037CD291CCA4744551
+      - 5C0588047CD291CCA4744552
+      - 5C0588047CD291CCA4744553
 ```
 
-on rollout dashboard
-![dashboard](https://files.readme.io/dcb562f-screen_shot_2018-12-03_at_21.43.19.png)
-## target group yaml
+![DASHBOARD](HTTPS://FILES.README.IO/7AFFBBE-SCREEN_SHOT_2018-12-03_AT_21.47.05.PNG)
+### USING NUMBER PROPERTY FOR COMPARISON
 
-a target group is a set of rules on top of custom properties that are defined in runtime, it is used in experiments conditions
-
-```yaml
-# yaml api version
-# optional: defaults to "1.0.0"
-version: semver
-
-# yaml type (required)
-type: "target-group"
-
-#target group name
-name: string
-
-# target group description
-# optional = ""
-description: string
-
-# the logical relationship between conditions
-# optional = and
-operator: or|and
-
-# array of conditions that have a logical and relationship between them
-conditions:
-    # the custom property to be conditioned (first operand)
-  - property: string
-
-    # the operator of the confition
-    operator: is-undefined|is-true|is-false|eq|ne|gte|gt|lt|lte|regex|semver-gt|semver-eq|semver-gte|semver-gt|semver-lt|semver-lte
-
-    # the second operand of the condition
-    # optional - based on operator  (is-undefined, is-true, is-false)
-    operand: string|number|[string]
+```YAML
+TYPE: TARGET-GROUP
+NAME: DJ
+CONDITIONS:
+  - OPERATOR: GTE
+    PROPERTY: PLAYLIST_COUNT
+    OPERAND: 100
+DESCRIPTION: USERS WITH A LOT OF PLAYLISTS
 ```
 
-# see also:
-- using roxy docker image for microservices automated testing and local development [here](https://support.rollout.io/docs/microservices-automated-testing-and-local-development)
-- configuration as code advantages [here](https://support.rollout.io/docs/configuration-as-code#section-advantages-of-configuration-as-code)
-- integration walkthrough [here](https://support.rollout.io/docs/configuration-as-code#section-connecting-to-github-cloud)
+ON ROLLOUT DASHBOARD
+![DASHBOARD](HTTPS://FILES.README.IO/DCB562F-SCREEN_SHOT_2018-12-03_AT_21.43.19.PNG)
+## TARGET GROUP YAML
+
+A TARGET GROUP IS A SET OF RULES ON TOP OF CUSTOM PROPERTIES THAT ARE DEFINED IN RUNTIME, IT IS USED IN EXPERIMENTS CONDITIONS
+
+```YAML
+# YAML API VERSION
+# OPTIONAL: DEFAULTS TO "1.0.0"
+VERSION: SEMVER
+
+# YAML TYPE (REQUIRED)
+TYPE: "TARGET-GROUP"
+
+#TARGET GROUP NAME
+NAME: STRING
+
+# TARGET GROUP DESCRIPTION
+# OPTIONAL = ""
+DESCRIPTION: STRING
+
+# THE LOGICAL RELATIONSHIP BETWEEN CONDITIONS
+# OPTIONAL = AND
+OPERATOR: OR|AND
+
+# ARRAY OF CONDITIONS THAT HAVE A LOGICAL AND RELATIONSHIP BETWEEN THEM
+CONDITIONS:
+    # THE CUSTOM PROPERTY TO BE CONDITIONED (FIRST OPERAND)
+  - PROPERTY: STRING
+
+    # THE OPERATOR OF THE CONFITION
+    OPERATOR: IS-UNDEFINED|IS-TRUE|IS-FALSE|EQ|NE|GTE|GT|LT|LTE|REGEX|SEMVER-GT|SEMVER-EQ|SEMVER-GTE|SEMVER-GT|SEMVER-LT|SEMVER-LTE
+
+    # THE SECOND OPERAND OF THE CONDITION
+    # OPTIONAL - BASED ON OPERATOR  (IS-UNDEFINED, IS-TRUE, IS-FALSE)
+    OPERAND: STRING|NUMBER|[STRING]
+```
+
+# SEE ALSO:
+- USING ROXY DOCKER IMAGE FOR MICROSERVICES AUTOMATED TESTING AND LOCAL DEVELOPMENT [HERE](HTTPS://SUPPORT.ROLLOUT.IO/DOCS/MICROSERVICES-AUTOMATED-TESTING-AND-LOCAL-DEVELOPMENT)
+- CONFIGURATION AS CODE ADVANTAGES [HERE](HTTPS://SUPPORT.ROLLOUT.IO/DOCS/CONFIGURATION-AS-CODE#SECTION-ADVANTAGES-OF-CONFIGURATION-AS-CODE)
+- INTEGRATION WALKTHROUGH [HERE](HTTPS://SUPPORT.ROLLOUT.IO/DOCS/CONFIGURATION-AS-CODE#SECTION-CONNECTING-TO-GITHUB-CLOUD)
 
 
-please contact support@rollout.io for any issues questions or suggestions you might have
+PLEASE CONTACT SUPPORT@ROLLOUT.IO FOR ANY ISSUES QUESTIONS OR SUGGESTIONS YOU MIGHT HAVE
