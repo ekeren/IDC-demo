@@ -6,7 +6,7 @@ This repository is a YAML represnetation for Rollout configuration, it is connec
 Configuration as code allows the entire configuration of Rollout's state to be stored as source code. It integrates Rollout's UI with engineering existing environment. This approach brings a lot of benefits.
 
 
-# What is Rollout
+# What is Rollout A
 Rollout is a multi-platform, infrastructure as code, software as a service feature management and remote configuration solution.
 
 # What Are Feature Flags
