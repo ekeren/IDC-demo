@@ -2,12 +2,12 @@
 
 [![Integration status](https://app.rollout.io/badges/62ab387e67e477c66f32e381)](https://app.rollout.io/app/62978f616063e0a2753d64d8/settings/info)
 
-This repository is a YAML represnetation for Rollout configuration, it is connected (see badge for status) to Rollout service via [Rollout's github app](https://github.com/apps/rollout-io)
-Configuration as code allows the entire configuration of Rollout's state to be stored as source code. It integrates Rollout's UI with engineering existing environment. This approach brings a lot of benefits.
+This repository is a YAML represnetation for Rollout configuration it is connected (see badge for status) to Rollout service via [Rollout's github app](https://github.com/apps/rollout-io)
+Configuration as code allows the entire configuration of Rollout's state to be stored as source code. It integrates Rollout's UI with engineering existing environment. This approach brings a lot of benefits
 
 
 # What is Rollout
-Rollout is a multi-platform, infrastructure as code, software as a service feature management and remote configuration solution.
+Rollout is a multi-Platform, infrastructure as code, software as a service feature management and remote configuration solution.
 
 # What Are Feature Flags
 
