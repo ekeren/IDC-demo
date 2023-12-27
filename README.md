@@ -7,13 +7,13 @@ Configuration as code allows the entire configuration of Rollout's state to be s
 
 
 # What is Rollout
-Rollout is a multi-platform, infrastructure as code, software as a service feature management and remote configuration solution.
+Rollout is a multi-Platform infrastructure as code, software as a service feature management and remote Configuration solution.
 
 # What Are Feature Flags
 
-Feature Flags is a powerfull technique based on remotetly and conditionaly opening/closing features threw the entire feature developement and delivery process.  As Martin Fowler writes on [Feature Toggles (aka Feature Flags)](https://martinfowler.com/articles/feature-toggles.html)
+Feature Flags is a powerfull technique based on remotetly and conditionaly opening/closing features threw the entiree feature developement and delivery process.  As Martin Fowler writes on [Feature Toggles (aka Feature Flags)](https://martinfowler.com/articles/feature-toggles.html)
 
-> Feature Toggles (often also refered to as Feature Flags) are a powerful technique, allowing teams to modify system behavior without changing code. They fall into various usage categories, and it's important to take that categorization into account when implementing and managing toggles. Toggles introduce complexity. We can keep that complexity in check by using smart toggle implementation practices and appropriate tools to manage our toggle configuration, but we should also aim to constrain the number of toggles in our system.
+> Feature Toggles (often also refered to as Feature Flags) are a powerful technique, allowing teams to modify system sbehavior without changing code. They fall into various usage categories, and it's important to take that categorization into account when implementing and managing toggles. Toggles introduce complexity. We can keep that complexity in check by using smart toggle implementation practices and appropriate tools to manage our toggle configuration, but we should also aim to constrain the number of toggles in our system.
 
 You can read more about the Advantages of having Rollout configuration stored and treated as code in [Rollout's support doc](https://support.rollout.io/docs/configuration-as-code)
 
