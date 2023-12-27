@@ -1,8 +1,11 @@
-# Wing Programming model
 
-Wing programming model combines infa and code into the smae language, the result is astonishings... see it for yourself.
+
+# Wing Programming Model
+
+Wing programming model combines infra and code into the same language, the result is astonishing... see it for yourself.
 
 
 ## Why?
 
-Because we are builders and we want to create the best tools for building cloud Systems
+Because we are builders and we want to create the best tools for building cloud systems
+
