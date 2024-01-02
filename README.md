@@ -1,49 +1,49 @@
 
 
-# Bedrock + Wing Workshop  
+# BEDROCK + WING WORKSHOP  
 
-_Building a Serverless Workflow, Powered by AI_
+_BUILDING A SERVERLESS WORKFLOW, POWERED BY AI_
 
-This repo is a step-by-step guide for an online workshop ([Eventbrite](https://www.eventbrite.com/e/amazon-bedrock-winglang-tickets-769562721817)).
+THIS REPO IS A STEP-BY-STEP GUIDE FOR AN ONLINE WORKSHOP ([EVENTBRITE](HTTPS://WWW.EVENTBRITE.COM/E/AMAZON-BEDROCK-WINGLANG-TICKETS-769562721817)).
 
-## Any Issues? Questions? Let's Talk!  
+## ANY ISSUES? QUESTIONS? LET'S TALK!  
 
-Please [join Winglang's Slack](https://t.winglang.io/slack); we have a dedicated channel for this workshop [#workshop-bedrock](https://winglang.slack.com/archives/C06BWT4PC30).
+PLEASE [JOIN WINGLANG'S SLACK](HTTPS://T.WINGLANG.IO/SLACK); WE HAVE A DEDICATED CHANNEL FOR THIS WORKSHOP [#WORKSHOP-BEDROCK](HTTPS://WINGLANG.SLACK.COM/ARCHIVES/C06BWT4PC30).
 
-## During the Session, You'll Learn the Following:  
+## DURING THE SESSION, YOU'LL LEARN THE FOLLOWING:  
 
-- Intro to [Amazon Bedrock](https://aws.amazon.com/bedrock/)
-- Use Amazon Bedrock Resources from Wing  
-- Create a GitHub App
-- Commit Code into Open PR
-- How to Produce Ready-to-Apply Terraform Assets  
+- INTRO TO [AMAZON BEDROCK](HTTPS://AWS.AMAZON.COM/BEDROCK/)
+- USE AMAZON BEDROCK RESOURCES FROM WING  
+- CREATE A GITHUB APP
+- COMMIT CODE INTO OPEN PR
+- HOW TO PRODUCE READY-TO-APPLY TERRAFORM ASSETS  
 
-### Some General Resources:  
+### SOME GENERAL RESOURCES:  
 
-- [Learn about Inflights](https://www.winglang.io/docs/concepts/inflights) - Preflight and Inflight are Winglang's Most Important Core Concepts  
-- [Cheat Sheet](./cheatsheet.md) - Let's Learn Wing in 5 Minutes, Shall We?
-- [Language Reference](https://www.winglang.io/docs/language-reference) - A Complete Language Reference for Winglang  
-- [Winglibs](https://github.com/winglang/winglibs) - Wing Trusted Library Ecosystem
-- [Playground](https://www.winglang.io/play/) - Write and Test Wing Code Online  
+- [LEARN ABOUT INFLIGHTS](HTTPS://WWW.WINGLANG.IO/DOCS/CONCEPTS/INFLIGHTS) - PREFLIGHT AND INFLIGHT ARE WINGLANG'S MOST IMPORTANT CORE CONCEPTS  
+- [CHEAT SHEET](./CHEATSHEET.MD) - LET'S LEARN WING IN 5 MINUTES, SHALL WE?
+- [LANGUAGE REFERENCE](HTTPS://WWW.WINGLANG.IO/DOCS/LANGUAGE-REFERENCE) - A COMPLETE LANGUAGE REFERENCE FOR WINGLANG  
+- [WINGLIBS](HTTPS://GITHUB.COM/WINGLANG/WINGLIBS) - WING TRUSTED LIBRARY ECOSYSTEM
+- [PLAYGROUND](HTTPS://WWW.WINGLANG.IO/PLAY/) - WRITE AND TEST WING CODE ONLINE  
 
-## The Application  
+## THE APPLICATION  
 
-A GitHub Application that Listens to Any Incoming Pull Requests and Corrects Spelling, Grammar & Punctuation for Any `*.md` Files that Were Changed during this Pull Request.  
+A GITHUB APPLICATION THAT LISTENS TO ANY INCOMING PULL REQUESTS AND CORRECTS SPELLING, GRAMMAR & PUNCTUATION FOR ANY `*.MD` FILES THAT WERE CHANGED DURING THIS PULL REQUEST.  
 
-### Workshop Sessions  
+### WORKSHOP SESSIONS  
 
-1. **Setup & Prerequisites** - Tools, Setup and Getting Access to AWS Bedrock Foundation Models ([link](./01-setup.md))  
-2. **Why Winglang** - Short Recap](https://raw.githubusercontent.com/ekeren/react-wing-workshop/main/assets/why.pdf) - Problems with Serverless, and the Wing Approach  
-3. **Introduction to Bedrock** - A Short Introduction to Amazon Bedrock Service by [Arik Porat](https://www.linkedin.com/in/arik-porat-15419426/), Solutions Architect at AWS  
-4. Using Bedrock in Wing - Installing & Using `winglibs/bedrock` Module ([link](./04-bedrock.md))  
-5. GitHub App DYI - How to Build Your Own GitHub Bot ([link](./05-github-diy.md))  
-6. Wing's GitHub Module - Using `winglibs/github` Instead to Make an Uppercase Bot ([link](./06-github-winglibs.md)) 
-7. Spell Checking with Bedrock - Modifying the Files Based on `winglibs/bedrock` ([link]((./07-wrap.md)))  
-8. Thank You for Flying with Us - Deploy Application to AWS ([link]((./08-deploy.md)))  
+1. **SETUP & PREREQUISITES** - TOOLS, SETUP AND GETTING ACCESS TO AWS BEDROCK FOUNDATION MODELS ([LINK](./01-SETUP.MD))  
+2. **WHY WINGLANG** - SHORT RECAP](HTTPS://RAW.GITHUBUSERCONTENT.COM/EKEREN/REACT-WING-WORKSHOP/MAIN/ASSETS/WHY.PDF) - PROBLEMS WITH SERVERLESS, AND THE WING APPROACH  
+3. **INTRODUCTION TO BEDROCK** - A SHORT INTRODUCTION TO AMAZON BEDROCK SERVICE BY [ARIK PORAT](HTTPS://WWW.LINKEDIN.COM/IN/ARIK-PORAT-15419426/), SOLUTIONS ARCHITECT AT AWS  
+4. USING BEDROCK IN WING - INSTALLING & USING `WINGLIBS/BEDROCK` MODULE ([LINK](./04-BEDROCK.MD))  
+5. GITHUB APP DYI - HOW TO BUILD YOUR OWN GITHUB BOT ([LINK](./05-GITHUB-DIY.MD))  
+6. WING'S GITHUB MODULE - USING `WINGLIBS/GITHUB` INSTEAD TO MAKE AN UPPERCASE BOT ([LINK](./06-GITHUB-WINGLIBS.MD)) 
+7. SPELL CHECKING WITH BEDROCK - MODIFYING THE FILES BASED ON `WINGLIBS/BEDROCK` ([LINK]((./07-WRAP.MD)))  
+8. THANK YOU FOR FLYING WITH US - DEPLOY APPLICATION TO AWS ([LINK]((./08-DEPLOY.MD)))  
 
 ---  
 
-### What's Next?   
+### WHAT'S NEXT?   
 
-In the Next Session We Will Be Using [LangChain](https://www.langchain.com/) with [AWS Bedrock](https://aws.amazon.com/bedrock/) to Embed Documents into [Momento Vector Index](https://docs.momentohq.com/vector-index)
+IN THE NEXT SESSION WE WILL BE USING [LANGCHAIN](HTTPS://WWW.LANGCHAIN.COM/) WITH [AWS BEDROCK](HTTPS://AWS.AMAZON.COM/BEDROCK/) TO EMBED DOCUMENTS INTO [MOMENTO VECTOR INDEX](HTTPS://DOCS.MOMENTOHQ.COM/VECTOR-INDEX)
 
