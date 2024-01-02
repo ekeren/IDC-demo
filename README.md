@@ -15,7 +15,7 @@ Please [join Winglang's Slack](https://t.winglang.io/slack); we have a dedicated
 - Into session to [Amazon Bedrock](https://aws.amazon.com/bedrock/)
 - Use Amazon Bedrock Resource from Wing
 - Create a Github App 
-- Commit Code into open PR
+- Commit Code into open PR.
 - How to produce ready-to-apply Terraform assets.
 
 ### Some General Resources:
