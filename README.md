@@ -1,5 +1,3 @@
-
----
 # Bedrock + Wing Workshop
 
 _Building a serverless Workflow, Powered by AI_
@@ -14,8 +12,8 @@ Please [join Winglang's Slack](https://t.winglang.io/slack); we have a dedicated
 
 - Into session to [Amazon Bedrock](https://aws.amazon.com/bedrock/)
 - Use Amazon Bedrock Resource from Wing
-- Create a Github App 
-- Commit Code into open PR
+- Create a Github App
+- Commit Code into open PR.
 - How to produce ready-to-apply Terraform assets.
 
 ### Some General Resources:
@@ -23,7 +21,7 @@ Please [join Winglang's Slack](https://t.winglang.io/slack); we have a dedicated
 - [Learn about Inflights](https://www.winglang.io/docs/concepts/inflights) - Preflight and Inflight are Winglang's most important core concepts.
 - [Cheat Sheet](./cheatsheet.md) - Let's learn Wing in 5 minutes, shall we?
 - [Language Reference](https://www.winglang.io/docs/language-reference) - A complete language reference for Winglang.
-- [Winglibs](https://github.com/winglang/winglibs) - Wing Trusted Library Ecosystem 
+- [Winglibs](https://github.com/winglang/winglibs) - Wing Trusted Library Ecosystem
 - [Playground](https://www.winglang.io/play/) - Write and test Wing code online.
 
 ## The Application
