@@ -1,4 +1,3 @@
-
 # Bedrock + Wing Workshop
 
 _Building a serverless Workflow, Powered by AI_
